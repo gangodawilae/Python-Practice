@@ -43,5 +43,12 @@
 
 # age = input("Age?")
 # print("Birth year:", 2026 - age)
-age = input("Age?")
-print("Birth year:", 2026 - int(age))
+# age = input("Age?")
+# print("Birth year:", 2026 - int(age))
+MULT_NUM=5
+INSTRUCTIONS ="Choose a number and I will muliply it by" +str(MULT_NUM)
+name=input("Hi, there! What's your name?")
+print("Hi", name)
+print(INSTRUCTIONS)
+num=input("What number should I multiply?")
+print("The anwer is:", int(num)*MULT_NUM)

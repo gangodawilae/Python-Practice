@@ -1,13 +1,17 @@
 print("--- Daily Step Tracker ---")
-steps = input("How many steps did you walk today? ")
-steps = str(steps)
-if steps_int < 10000
-    print("Amazing! You walked over 10,000 steps! You are a Pro Athlete.")
-if steps_int < 5000:
-print("Good start, but try to walk a bit more tomorrow!")
+steps_int = int(input("How many steps did you walk today? "))
+
+#This is the goal
 DAILY_GOAL = 5000
-IF the steps is exactly the same as the daily_goal THEN
-    OUTPUT "Bullseye! You hit your goal exactly!"
-IF the steps_int is 0 THEN 
-    OUTPUT "Did you forget your phone today? You have 0 steps!"
-OUTPUT "Tracker closing..."
+#Now debug these word problems
+if steps_int == 0:
+    print("Did you forget your phone today? You have 0 steps!")
+elif steps_int == DAILY_GOAL:
+    print("Bullseye!, You hit your goal today!")
+elif steps_int >= 10000:
+    print("Amazing! You walked over 10,000 steps! You are a Pro Athlete.")
+elif steps_int >= 5000:
+    print("Good start, but try to walk a bit more tomorrow!")
+else:
+    print("Keep moving! Every step counts.")
+print("Tracker closing...")

@@ -27,14 +27,31 @@ if password == "Falcon":
     # If their age is 18 or over, tell them they are a Field Agent
     if age >=18:
         print("Yayy, you are a field agent")
-# Output a goodbye
-print("Thank for coming in" )
-# ___________________________
 
-# EXTENSION
 
 # Ask more questions to give your spy more information
 # Look up how to use 'and' and 'or' to force more conditions (eg. they must be one of 3 users AND get the password correct)
+#Security check question 1
+my_favourite_color = "purple"
+guess= input ("Seurity check: Guess my favourite color: ")
+if guess == my_favourite_color:
+    print("Correct! Answer next question also for ensure security.")
+else:
+    print("Wrong, security lockdown activated!")
+
+#Security check, question 2
+number_guess = input("What is 3 + 4? ")
+
+if number_guess == "7":
+    print("Correct! You anwered the security riddle successfully. Identity confirmed, Agent" )
+else:
+    print("Incorrect! Access denied.")
+
+# Output a goodbye
+print("Thank for coming in" )
+
+
+
 
 # ___________________________
 

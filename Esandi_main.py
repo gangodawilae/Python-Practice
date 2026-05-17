@@ -68,6 +68,15 @@ print( 5 !=6)
 #     print('hello')
 # if 5 < 10:
 #     pass
-if 10 != 10:
-    print('hello')
-print('goodbye')
+# if 10 != 10:
+#     print('hello')
+# print('goodbye')
+
+# if 5 < 10:
+# print('Less than 10')
+# print('10 or more')
+
+if 5 < 10:
+print('Less than 10')
+else:
+	print('10 or more')

@@ -1,8 +1,9 @@
 ### Budget Tracker ###
 # Create a budget tracker that gives financial recommendation around an item
-
+print("Welcome, to your budget tracker  \nThis will help you to give financial recommandations around an item")
+# print("\n This will help ou to give financial recommandations around an item")
 # Create a constant to hold your budget
-BUDGET = 500
+BUDGEST = 50
 # Create a constant to hold your savings (percentage) goal
 SAVING_GOAL = 20
 # Ask user for item name and save in variable
@@ -11,9 +12,9 @@ cost_input = input("How much does it cost?")
 # Change the cost into an integer
 cost=int(cost_input)
 # Calculate the percentage of budget (cost / budget) * 100
-percentage = (cost/BUDGET) * 100
+percentage = (cost/BUDGEST) * 100
 # Tell your user the percentage of your budget
-print("This item cost", percentage,"% of your total budget.")
+print("This item cost", percentage," of your total budget.")
 # Check if percentage is 0 and say it's free if it is
 if percentage == "0":
     print("It's free for you")

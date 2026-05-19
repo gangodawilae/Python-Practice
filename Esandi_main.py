@@ -52,14 +52,14 @@
 # print(INSTRUCTIONS)
 # num=input("What number should I multiply?")
 # print("The anwer is:", int(num)*MULT_NUM)
-print(5+5==10)
-print(5+5==8)
-print (5== 5.0)
-print("hello"=='hi')
-print(5+5>=10)
-print(5+5 >=8)
-print(5 !=5)
-print( 5 !=6)
+# print(5+5==10)
+# print(5+5==8)
+# print (5== 5.0)
+# print("hello"=='hi')
+# print(5+5>=10)
+# print(5+5 >=8)
+# print(5 !=5)
+# print( 5 !=6)
 # if 5 < 10:
 # if 5 < 10:
 # print('hello')
@@ -76,7 +76,14 @@ print( 5 !=6)
 # print('Less than 10')
 # print('10 or more')
 
-if 5 < 10:
-print('Less than 10')
-else:
-	print('10 or more')
+# if 5 < 10:
+# print('Less than 10')
+# else:
+# 	print('10 or more')
+
+name = input()
+if name == "Athena":
+    print("Goddess of wisdom")
+
+if name == "Apollo":
+    print("God of the sun")

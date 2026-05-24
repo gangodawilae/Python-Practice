@@ -81,9 +81,15 @@
 # else:
 # 	print('10 or more')
 
-name = input()
-if name == "Athena":
-    print("Goddess of wisdom")
+# name = input()
+# if name == "Athena":
+#     print("Goddess of wisdom")
 
-if name == "Apollo":
-    print("God of the sun")
+# if name == "Apollo":
+#     print("God of the sun")
+# print('hello'.upper())
+# print('HELLO'.lower())
+# if 'HELLO' == 'hello':
+# print('The same!')
+if 'HELLO'.lower() == 'hello':
+    print('The same!')

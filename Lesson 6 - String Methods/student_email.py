@@ -5,7 +5,7 @@
 first_name=input("Please enter your first name")
 last_name=input("Please enter your last name")
 student_id=input("Please enter your student ID")
-password_here=input("Please create a simple password here")
+
 
 # Strip input to remove accidental spaces and turn names into lowercase (resave in variables)
 first_clean = first_name.strip().lower()
@@ -16,16 +16,27 @@ id_clean = student_id.strip().lower()
 # {last_clean}
 
 # Output the final email address
-student_email=f"{last_clean}{first_clean}{id_clean}@fake.school.nz"
+# student_email=f"{last_clean}{first_clean}{id_clean}@fake.school.nz"
 
-print(f"your generated email is {student_email}")
+print("Your generated email is:",last_clean + first_clean + id_clean + "@fake.school.nz") 
 # --------------------------------
 
 # EXTENSION
 # Create a temporary password to output as well
-print("Create a temporay password here")
-# It should be their names in all uppercase and their id divided by 10
+# print("Create a temporay password here")
+print("Temporray passord tetails")
 
+# It should be their names in all uppercase and their id divided by 10
+temporary_first_upper = first_clean.upper()
+temporary_last_upper = last_clean.upper()
+ #Divide by 10
+divided_id = int(id_clean)//10
+#Use all for the final password
+temporary_password=temporary_first_upper+ temporary_last_upper + str(divided_id)
+#The final password
+print("Your temporary password is:", temporary_password)
+# temporary_password = "temporary_first_upper + temporary_last_upper+ str(divided_id)"
+# print("Your temporary password i:" +temporary_password)
 # --------------------------------
 
 # EXPERT

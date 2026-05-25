@@ -89,7 +89,13 @@
 #     print("God of the sun")
 # print('hello'.upper())
 # print('HELLO'.lower())
-# if 'HELLO' == 'hello':
-# print('The same!')
-if 'HELLO'.lower() == 'hello':
-    print('The same!')
+# # if 'HELLO' == 'hello':
+# # print('The same!')
+# if 'HELLO'.lower() == 'hello':
+#     print('The same!')
+# age = 10
+# if age == 11 or 12:
+#     print('Access granted')
+age = 10
+if age == 11 or age == 12:
+    print('Access granted')

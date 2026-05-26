@@ -96,6 +96,27 @@
 # age = 10
 # if age == 11 or 12:
 #     print('Access granted')
-age = 10
-if age == 11 or age == 12:
-    print('Access granted')
+# age = 10
+# if age == 11 or age == 12:
+#     print('Access granted')
+
+# f“Hello {name}.”
+# name = 'Paul'
+# age = 15
+# print(name + ' is ' + age)
+
+# name = 'Paul'
+# age = 15
+# print(name + ' is ' + age)
+
+# name = 'Paul'
+# age = 15
+# print(name + ' is ' + age)
+
+name = 'Paul'
+age = 15
+print(f'{name} is {age}')
+
+
+
+

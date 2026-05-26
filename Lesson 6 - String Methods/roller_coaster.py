@@ -18,33 +18,32 @@ vip=input("Do you have a VIP password?\n (yes/no):").lower()
 # Check conditions and output verdict
 if vip=="yes":
     print("Access guranteed")
+    
 else:
     #1st ride rules
-
     if ride=="A":
-       if height>150 and age>10 and conditions=="no":
-           print("Access guranteed for your first ride which is Fear Drop") 
-
+        if height>150 and age>10 and conditions=="no":
+            print("Access guranteed for your first ride which is Fear Drop") 
 
    #2nd ride rules
     elif ride == "B":
         if height>140 and age>12:
             print("Access gurenteed for our second ride which is bumper boats")
-    else:
-        print("Access denied for ride B")
+    # else:
+    #     print("Access denied for ride B")
 
-   #3rd ride rules
+    
+    #3rd ride rules
     elif ride == "C":
-        if height > 120 and age > 8 and conditions == "no":
+        if height>120 and age>8 and conditions == "no":
             print("Access gurenteed for our second ride which is scorpian karts")
-        else:
-            print("Access dened for ride C")
+
+   
+    # else:
+    #         print("Access dened for ride C")
 
 
-# elif height>150 and age>10 and conditions=="no":
-#     print("Access guranteed")
-# else:
-#     print("Access denied")
+
 
 
 # ------------------------------

@@ -1,5 +1,6 @@
 #Starts with 0 points
 score =0
+#Start of the quiz with a welcome to my quiz
 print("Hello!")
 print("Welcome to my quiz game!")
 print("Choose the correct option,(a, b, or c)")
@@ -7,25 +8,29 @@ input("Are you ready...?")
 print("Let's start!!, I believe in you")
 
 #Question 1 with answers
-print("1. who is the first person to space?")
+print("\n1. who is the first person to space?")
 print("a) Yuri Gagarin")
 print("b)Thomas Eddison")
 print("c)Neil Armstrong")
-answer=input("Your answer: ")
-if answer == "a":
+
+answer=input("Your answer: ").strip().lower()
+
+#This is where this accept letter or word
+if answer == "a" or answer == "yuri gagarin":
    print("correct!")
    score= score + 1
 else:
-   print("Wrong. The answer is a")
+   print("Wrong. The answer is A")
 
 #Question 2 with answers
-print("2. Which bird can fly backward?")
+print("\n2. Which bird can fly backward?")
 print("a) Blue duck")
 print("b)Hummingbird")
 print("c) Butterfly")
-answer=input("Your answer: ")
+answer=input("Your answer: ").strip().lower()
 
-if answer == "b":
+#This is where this accept letter or word
+if answer == "b" or answer == "hummingbird":
    print("Correct!")
    score= score + 1
 else:
@@ -36,8 +41,10 @@ print("3. What is the nation bird of New Zealand?")
 print("a)kiwi")
 print("b)Tui")
 print("c)Ruru")
-answer=input("Your answer: ")
-if answer == "a":
+
+answer=input("Your answer: ").strip().lower()
+
+if answer == "a" or answer=="kiwi":
    print("Correct!")
    score= score + 1
 else:
@@ -48,8 +55,8 @@ print("4. Where is Mount Olympus located")
 print("a)Rome")
 print("b)Russia")
 print("c)Greece")
-answer=input("Your answer: ")
-if answer == "c":
+answer=input("Your answer: ").strip().lower()
+if answer == "c" or answer=="greece":
    print("Correct!")
    score= score + 1
 else:
@@ -60,20 +67,20 @@ print("5. What does cows drink?")
 print("a)Water")
 print("b)Milk")
 print("c)Tea")
-answer=input("Your answer: ")
-if answer == "a":
+answer=input("Your answer: ").strip().lower()
+if answer == "a" or answer == "water":
    print("Correct!")
    score= score + 1
 else:
-   print("Wrong. The answer is a." )
+   print("You must choose a,b or c. Try again" )
 
 #Question 6 with answers
 print("6. What is 128+22-5")
 print("a)117")
 print("b)35")
 print("c)145")
-answer=input("Your answer: ")
-if answer == "c":
+answer=input("Your answer: ").strip().lower()
+if answer == "c" or answer== "145":
    print("correct!")
    score= score + 1
 else:

@@ -16,7 +16,6 @@ id_clean = student_id.strip().lower()
 # {last_clean}
 
 # Output the final email address
-# student_email=f"{last_clean}{first_clean}{id_clean}@fake.school.nz"
 
 print("Your generated email is:",last_clean + first_clean + id_clean + "@fake.school.nz") 
 # --------------------------------
@@ -24,19 +23,21 @@ print("Your generated email is:",last_clean + first_clean + id_clean + "@fake.sc
 # EXTENSION
 # Create a temporary password to output as well
 # print("Create a temporay password here")
-print("Temporray passord tetails")
+print("Temporray passord details")
 
 # It should be their names in all uppercase and their id divided by 10
 temporary_first_upper = first_clean.upper()
 temporary_last_upper = last_clean.upper()
  #Divide by 10
 divided_id = int(id_clean)//10
+
 #Use all for the final password
 temporary_password=temporary_first_upper+ temporary_last_upper + str(divided_id)
+
+
 #The final password
 print("Your temporary password is:", temporary_password)
-# temporary_password = "temporary_first_upper + temporary_last_upper+ str(divided_id)"
-# print("Your temporary password i:" +temporary_password)
+
 # --------------------------------
 
 # EXPERT

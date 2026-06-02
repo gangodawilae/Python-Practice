@@ -15,7 +15,7 @@ print(f"\nLet's start!!, I believe in you, {user_name}!")
 print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
 
 #Question 1
-print("\n1. who is the first person to space?")
+print("\n1. Who is the first person to space?")
 print("a) Yuri Gagarin")
 print("b)Thomas Eddison")
 print("c)Neil Armstrong")
@@ -38,7 +38,7 @@ print("\n2. What is 5+3?")
 answer= input("Your answer:").strip()
 
 #Turning string into a integer before comparing
-if int(answer) ==8 or answer== "eight":
+if int(answer) ==8:
    print(f"Correct, {user_name}. Your are great at maths!")
    score=score +1
 else:
@@ -64,7 +64,7 @@ else:
 
 
 #Question 4 
-print("\n4. What is the nation bird of New Zealand?")
+print("\n4. What is the national bird of New Zealand?")
 print("a)kiwi")
 print("b)Tui")
 print("c)Ruru")
@@ -121,7 +121,7 @@ print("c)145")
 
 answer=input("Your answer: ").strip().lower()
 
-if answer == "c" or answer== "145":
+if answer in ("c", "145", "one hundred forty five", "one hundred and forty five"):
    print(f"correct!, {user_name}. Good Job. ")
    print(" (.^.)")
    score= score + 1
@@ -134,7 +134,7 @@ else:
 print("\n8.What is the diffrence between object mode and edit mode in blender?")
 print("a)Object mode is for animating and edit mode is for texturing")
 print("b)Object mode is for modelling and edit mode is for moving objects around ")
-print("c)Object mode is for position, rotate and scale the objects while edit mode is for change their geoetry. ")
+print("c)Object mode is for position, rotate and scale the objects while edit mode is for change their geometry. ")
 
 answer=input("Your answer: ").strip().lower()
 
@@ -195,7 +195,12 @@ else:
    print(f"Wrong,{user_name}. The answer is b.")
 
 # Final Scoring and feedback
+print("\n******************************")
+print("" * 12 + "RESULTS")
 print(f"\n{user_name}, you got, {score} correct out of {TOTAL_QUESTIONS}!")
+print(">----(^_^)----<")
+print("*********************************")
+
 
 #Give feedback based on the score
 if score>=8 and score <=11:
@@ -214,3 +219,5 @@ print(r"(___Y___)_,--._______________________ GOOD JOB")
 print(r"               `--'           `--'")
 
 print("\nThanks for playing my quiz!!")
+print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
+

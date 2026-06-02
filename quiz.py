@@ -9,10 +9,10 @@ user_name=input("Hello! What is your name?").strip().title()
 
 #Start of the quiz with a welcome message to my quiz
 print(f"Welcome to my quiz game! {user_name}")
-print("INSTRUCTIONS:Choose the correct option,(a, b, or c) or write the answer")
+print("\nINSTRUCTIONS:Choose the correct option,(a, b, or c) or write the answer")
 input("Are you ready...? Press yes to start")
 print(f"\nLet's start!!, I believe in you, {user_name}!")
-
+print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
 
 #Question 1
 print("\n1. who is the first person to space?")
@@ -38,7 +38,7 @@ print("\n2. What is 5+3?")
 answer= input("Your answer:").strip()
 
 #Turning string into a integer before comparing
-if int(answer) ==8:
+if int(answer) ==8 or answer== "eight":
    print(f"Correct, {user_name}. Your are great at maths!")
    score=score +1
 else:

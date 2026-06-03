@@ -12,12 +12,12 @@
 #     name=input("Enter your name:")
 # print(f"Hello {name}")
 
-#Game 2
-# age=int(input("Enetr your age"))
-# while age <0:
-#     print("Age can't be 0") 
-#     age=int(input("Enter your age"))
-# print(f"You are {age} years old")
+# Game 2
+age=int(input("Enetr your age"))
+while age <0:
+    print("Age can't be 0") 
+    age=int(input("Enter your age"))
+print(f"You are {age} years old")
 
 
 #Game 3
@@ -38,5 +38,5 @@
 # print("Yayyyyyyy")
 
 #counting from 2s
-for x in range(1,11,3):
-    print(x)
+# for x in range(1,11,2):
+#     print(x)

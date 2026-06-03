@@ -113,10 +113,24 @@
 # age = 15
 # print(name + ' is ' + age)
 
-name = 'Paul'
-age = 15
-print(f'{name} is {age}')
+# name = 'Paul'
+# age = 15
+# print(f'{name} is {age}')
 
 
+# guess = input('What’s the password?')
+# print('Checking password is a match…')
+# while guess != 'secret':
+#     guess = input('Try again')
+# print('Checking password is a match…')
+# input('Welcome!')
 
+# print(random.random())
 
+# import random
+# print(random())
+
+import random
+print(random.random())
+print(random.randint(0,10))
+random.randint(1, 10)

@@ -13,19 +13,19 @@
 # print(f"Hello {name}")
 
 # Game 2
-age=int(input("Enetr your age"))
-while age <0:
-    print("Age can't be 0") 
-    age=int(input("Enter your age"))
-print(f"You are {age} years old")
+# age=int(input("Enetr your age"))
+# while age <0:
+#     print("Age can't be 0") 
+#     age=int(input("Enter your age"))
+# print(f"You are {age} years old")
 
 
-#Game 3
-# food=input("Enter a food you like (q to quit): ")
-# while not food == "q":
-#     print(f"You like {food}")
-#     food=input("Enter another food you like (please enter stop to quit): ")
-# print("bye")
+# Game 3
+food=input("Enter a food you like (q to quit): ")
+while not food == "q":
+    print(f"You like {food}")
+    food=input("Enter another food you like (please enter stop to quit): ")
+print("bye")
 
 
 #Use of "for" loops

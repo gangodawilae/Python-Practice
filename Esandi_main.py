@@ -173,9 +173,36 @@
 #     print('Almost done…')
 # print('Finished!')
 
-while True:
-	guess = input('Guess a country')
-if guess.lower().strip() == 'malawi':
-	break
-print('Try again.')
-print('Well done!')
+# while True:
+# 	guess = input('Guess a country')
+# if guess.lower().strip() == 'malawi':
+# 	break
+# print('Try again.')
+# print('Well done!')
+
+# ["apple", "ornages", "5", "True", "5.0"]
+
+# animals= ["cat", "dog", "bird"]
+# print(animals[0])
+# print(animals[1])
+# print(animals[2])
+
+
+# questions = ["What is 2+2?", "What is the capital of NZ?", "What colour is the sky?"]
+
+# for q in questions:
+#     print(q)
+    
+# numbers= [1,2,3]
+# numbers.append(4)
+# print(numbers)
+
+# shopping_list = ['apples','plums','pizza']
+# print(shopping_list[2])
+
+# shopping_list = ['apples','plums','pizza']
+# print(shopping_list[3])
+
+import random
+shopping_list = ['apples','plums','pizza']
+print(shopping_list[random.randint(0,2)])

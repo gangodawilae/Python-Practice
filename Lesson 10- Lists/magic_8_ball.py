@@ -9,14 +9,22 @@ import random
 
 # RESPONSES
 # TODO: Create a list called 'responses' that contains at least 8 different responses.
-responses = ["Yes, definetly",
+common_responses = ["Yes, definetly",
              "Absolutly",
-             "Ask again later",
-             "I don't thin soo..",
+             "Yeah, probably",
+            "I'm not sure"
+             "Could be",
              "No, definetly not",
-             "Maybe... bu try again later",
-             "Outlook not so good",
-             "Ask again later"]
+             "Maybe... but try again later",
+             "I guess soo...",
+             "Not really sure yet"]
+
+rare_responses = ["I don't think so...",
+                  "Honestly, I have no idea",
+                  "Ummm. I don't think I should answer that question",
+                  "I'm not sure about that one",
+                  "Ask me that again another day",
+                  "Hmmm. That's a tough one to answer actually"]
 
 # MAIN LOOP
 # TODO Create an infinite loop

@@ -57,15 +57,7 @@ while True:
 # TODO Say goodbye to let them know the program has ended.
 print("Good Bye")
 
-# ==================================================
-# EXTENSION
-# Common and rare responses
-# TODO Split your responses into 2 lists. A common responses list and a rare responses list
-# TODO Use random.random() or randint() to get a percentage
-# TODO Check if the number is lower than 0.8 and use the common list to give a response if it is
-# TODO Otherwise use the rare list
 
-# ===================================================
 # EXPERT
 # Try creating a magic eight ball that gives random responses based on the question (eg. positive, negative, snarky, funny responses)
 # TODO Create a dictionary (or multiple lists)

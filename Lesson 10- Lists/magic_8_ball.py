@@ -12,7 +12,7 @@ import random
 common_responses = ["Yes, definetly",
              "Absolutly",
              "Yeah, probably",
-            "I'm not sure"
+            "I'm not sure",
              "Could be",
              "No, definetly not",
              "Maybe... but try again later",
@@ -40,13 +40,16 @@ while True:
     #       (Remember: If a list has 5 items, the indexes are 0, 1, 2, 3, 4).
     #       Use random.randint() to get a number between 0 and that last index.
     #       Save it in a variable called 'random_index'.
-    last_index=7
-    random_index = random.randint(0, last_index)
+    chance = random.random()
+
+    #Check if the number is lower than 0.8 and use the common list
+    if chance <0.8:
+        chosen_fortune = random.choice(common_responses)
+
     
-    # TODO: Step B: Use your 'random_index' to grab the matching answer 
-    #       out of your 'responses' list.
-    #       Save it in a variable called 'chosen_fortune'.
-    chosen_fortune=  responses[random_index]
+    #Otherwise use the rare list
+    else:
+        chosen_fortune = random.choice(rare_responses)
 
     # TODO Print the result
     print("Magic 8 ball says..:", chosen_fortune )

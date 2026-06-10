@@ -208,13 +208,53 @@
 # print(shopping_list[random.randint(0,2)])
 
 
-shopping_list = ['apples', 'oranges','melons']
-print(shopping_list)
-shopping_list.append('carrots')
-shopping_list.remove('oranges')
-print(shopping_list)
-shopping_list.pop(0)
-shopping_list.insert('apples', 1)
-print(shopping_list)
-shopping_list.sort()
-print(shopping_list)
+# shopping_list = ['apples', 'oranges','melons']
+# print(shopping_list)
+# shopping_list.append('carrots')
+# shopping_list.remove('oranges')
+# print(shopping_list)
+# shopping_list.pop(0)
+# shopping_list.insert('apples', 1)
+# print(shopping_list)
+# shopping_list.sort()
+# print(shopping_list)
+
+# random.choice(my_list)
+# "a" in "apple"
+
+# shopping_list = ['apples','plums','pizza']
+# print('apples' in shopping_list)
+
+# print("a" in "definitely")
+
+# user_input = input()
+# if user_input.lower() in ['a', 'b','c', 'd']:
+#     print("Checking answer...")
+# else:
+#     print("That's not a valid answer!")
+
+# print(len('apples'))
+# shopping_list = ['apples', 'plums', 'pizzza']
+# print(len(shopping_list))
+
+# shopping_list = ['apples', 'plums', 'pizzza']
+# print(len(shopping_list[1]))
+
+# if len (input ()) == 0:
+#     print("You didn't type anything")
+
+# for food in ['apples', 'carrots','museli']:
+#     print(food)
+# for i in range (10):
+#     print('Hello')
+
+
+foods = ['apples', 'carrots', 'museli']
+for i in range (len(foods)):
+    print(f"{1+1}* {foods [1]}")
+
+thislist = ["apples", "banana", "cherry"]
+i=0
+while i < len(thislist):
+    print(thislist[i])
+    i=i+1

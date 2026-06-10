@@ -8,13 +8,14 @@
 shopping_cart= []
 # TODO: Create an empty list called 'price_list' to hold item prices.
 price_list= []
-
+budget=20
 # MAIN
 # TODO Create an infinite while loop
 while True:
     # Info for user
     print("\n Your current cart:", shopping_cart)
     print("Current prices:", price_list)
+    budget+=1
 
 
     # TODO Output Options for user: 1. Add item to cart, 2. Remove item from cart, 3. Clear cart and restart, 4. View total and checkout
@@ -98,9 +99,8 @@ while True:
 
     # -----------------------------------------------------------------
     # NO OPTION
-    # -----------------------------------------------------------------
-    # TODO Otherwise
-        # TODO Tell them that option isn't valid
+    else:
+        print("Your option isn't valid. Please enter valid options.")
 
 # ====================================================================
 # EXTENSION

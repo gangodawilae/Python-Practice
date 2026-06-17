@@ -10,17 +10,17 @@ import random
 # Create a multidimensional list that holds 4 pokemon names and their max health (you choose)
 wild_pokemon = [
     {"name":"pikachu","health": 60},
-    ["Charmander", 55],
-    ["Squirtle",65],
-    ["Bulbasaur", 70]
+    {"name":"Charmander","health":55},
+    {"name":"Squirtle","health":65},
+    {"name":"Bulbasaur","health": 70}
 ]
 # User Pokemon
 # Create a multidimensional list that holds 4 pokemon attacks and their different damage
 user_attacks=[
     {"move":"Tackle","damage":10},
-    ["Thunderbolt", 15],
-    ["Quick Attack", 12],
-    ["Mega punch", 20]
+    {"move":"Thunderbolt","damage":15},
+    {"move":"Quick Attack","damage":12},
+    {"move":"Mega punch", "damage":20}
 ]
 
 #  Create a variable to hold a randomised wild pokemon
@@ -58,11 +58,11 @@ while current_health>0:
 
     #Show remaining health
     if current_health>0:
-        print(f"{enemy[0]} has {current_health} health points left ")
+        print(f"{enemy["name"]} has {current_health} health points left ")
     else:
-        print(f"{enemy[0]} has 0 health points left")
+        print(f"{enemy["name"]} has 0 health points left")
 #End of the battle
-print(f"\n Yayyy. You defeated the wild {enemy[0]}. Good Job! ")
+print(f"\n Yayyy. You defeated the wild {enemy["name"]}. Good Job! ")
 
 # ====================================================
 # EXTENSION

@@ -249,12 +249,35 @@
 #     print('Hello')
 
 
-foods = ['apples', 'carrots', 'museli']
-for i in range (len(foods)):
-    print(f"{1+1}* {foods [1]}")
+# foods = ['apples', 'carrots', 'museli']
+# for i in range (len(foods)):
+#     print(f"{1+1}* {foods [1]}")
 
-thislist = ["apples", "banana", "cherry"]
-i=0
-while i < len(thislist):
-    print(thislist[i])
-    i=i+1
+# thislist = ["apples", "banana", "cherry"]
+# i=0
+# while i < len(thislist):
+#     print(thislist[i])
+#     i=i+1
+
+fruit = [
+    ["apples", 52],
+    ["oranges", 47],
+    ["pears", 57],
+    ["bananas", 89],
+    ["strawberries", 32],
+    ["grapes", 68],
+    ["blueberries", 57],
+    ["pineapples", 50],
+    ["kiwifruit", 61],
+    ["watermelons", 30]
+]
+
+print(fruit[5][1])
+print(fruit[0][0])
+print(fruit[8][1])
+# print(fruit[3][2])
+print(fruit[1][0])
+print(fruit[10][1])
+
+    
+

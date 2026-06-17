@@ -6,6 +6,8 @@ confiscated=[]
 
 print(f"Scanning inventory: (inventory)")
 
+
+#Use while loop and with length. 
 i=0 
 while i<len(inventory):
     item=inventory[i]
@@ -21,17 +23,17 @@ print(f"Scan complete. Total flag matches: {len(banned_items)}")
 if len(confiscated)>0:
     print("Items confiscated.")
 
-    #For number of items that confiscated in the list
+    #For number of items that confiscated  list
     for i in range(len(confiscated)):
+    #Print the item listed with a number
        print(f"{i + 1}. {confiscated[i].capitalize()}")
 
 print("Remaining intenvory:{inventory}")
        
-        # if item in banned_items:
+       
            
 
 
 
 
-    # FOR the number of items in the confiscated list (use index)
-        # PRINT the item listed with a number (eg. 1. Laser)
+    

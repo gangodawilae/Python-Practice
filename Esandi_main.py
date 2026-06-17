@@ -259,25 +259,76 @@
 #     print(thislist[i])
 #     i=i+1
 
-fruit = [
-    ["apples", 52],
-    ["oranges", 47],
-    ["pears", 57],
-    ["bananas", 89],
-    ["strawberries", 32],
-    ["grapes", 68],
-    ["blueberries", 57],
-    ["pineapples", 50],
-    ["kiwifruit", 61],
-    ["watermelons", 30]
-]
+# fruit = [
+#     ["apples", 52],
+#     ["oranges", 47],
+#     ["pears", 57],
+#     ["bananas", 89],
+#     ["strawberries", 32],
+#     ["grapes", 68],
+#     ["blueberries", 57],
+#     ["pineapples", 50],
+#     ["kiwifruit", 61],
+#     ["watermelons", 30]
+# ]
 
-print(fruit[5][1])
-print(fruit[0][0])
-print(fruit[8][1])
+# print(fruit[5][1])
+# print(fruit[0][0])
+# print(fruit[8][1])
 # print(fruit[3][2])
-print(fruit[1][0])
-print(fruit[10][1])
+# print(fruit[1][0])
+# print(fruit[10][1])
 
     
 
+# price=0
+
+# def caculate_with_discount():
+#     print(f"Price: ${price*0.7}")
+
+# calculate_with_discount()
+
+# PROGRAM: Geometry Helper
+# This program helps to calculate the area and circumference of a rectangle
+
+####### INSTRUCTIONS ########
+# Complete the code by writing a function for calculating the circumference,
+# and calling each calculate function based on user choice
+# =====================================================================
+# FUNCTIONS
+# =====================================================================
+
+# Calculate the area of a rectangle based on length and width from user
+def calculate_area():
+    length = int(input("What is the length? "))
+    width = int(input("What is the width? "))
+    print(f"The area is {length * width}².")
+
+# Write a function here for calculating the circumference after getting length and width from user
+def calculate_circumference():
+    length = int(input("What is the length? "))
+    width = int(input("What is the width? "))
+    print(f"The circumference is {2 * (length + width)}.")
+
+# Run the main program
+def main():
+    print("Welcome to the Geometry Helper for rectangles!\n")
+    print("1. Area Calculator")
+    print("2. Circumference Calculator")
+    
+    choice = input("\nWhich tool do you want to use? (1 or 2): ").strip()
+    
+    # Trigger function based on user choice
+    if choice == "1":
+        # Call the function for calculating area here
+        calculate_area()
+    elif choice == "2":
+        # Call the function for calculating circumference here
+        calculate_circumference()
+    else:
+        print("Invalid choice. Exiting dashboard.")
+
+# =====================================================================
+# EXECUTION
+# =====================================================================
+main()

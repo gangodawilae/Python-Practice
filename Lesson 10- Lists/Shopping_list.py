@@ -8,7 +8,7 @@
 shopping_cart= []
 # TODO: Create an empty list called 'price_list' to hold item prices.
 price_list= []
-budget=20
+
 # MAIN
 # TODO Create an infinite while loop
 while True:

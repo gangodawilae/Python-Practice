@@ -9,7 +9,7 @@ import random
 # Wild Pokemon
 # Create a multidimensional list that holds 4 pokemon names and their max health (you choose)
 wild_pokemon = [
-    ["pikachu", 60],
+    {"name":"pikachu","health": 60},
     ["Charmander", 55],
     ["Squirtle",65],
     ["Bulbasaur", 70]
@@ -17,7 +17,7 @@ wild_pokemon = [
 # User Pokemon
 # Create a multidimensional list that holds 4 pokemon attacks and their different damage
 user_attacks=[
-    ["Tackle", 10],
+    {"move":"Tackle","damage":10},
     ["Thunderbolt", 15],
     ["Quick Attack", 12],
     ["Mega punch", 20]
@@ -27,8 +27,8 @@ user_attacks=[
 enemy= random.choice(wild_pokemon)
 
 # Set current health to the pokeman's max health
-current_health=enemy[1]
-print(f"A wild {enemy[0]} appeared! It has the {current_health}. ")
+current_health=enemy["health"]
+print(f"A wild {enemy['name']} appeared! It has the {current_health}. ")
 
 #Battle loop
 while current_health>0:
@@ -36,7 +36,7 @@ while current_health>0:
     #Show attack options
     print("\nChoose your attack:")
     for i in range(len(user_attacks)):
-        print(f"{i+1}. {user_attacks[i][0]} ({user_attacks[i][1]} damage)")
+        print(f"{i+1}. {user_attacks[i]["move"]} ({user_attacks[i]["damage"]} damage)")
 
     #Get user's input
     choice=input("Please enter attack number:")
@@ -51,10 +51,10 @@ while current_health>0:
         continue
 
     #Apply damage
-    damage=user_attacks[choice][1]
+    damage=user_attacks[choice]["damage"]
     current_health-=damage
 
-    print(f"You need {user_attacks[choice][0]}")
+    print(f"You need {user_attacks[choice]["move"]}")
 
     #Show remaining health
     if current_health>0:

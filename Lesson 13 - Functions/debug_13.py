@@ -12,14 +12,8 @@ def check_system():
     else:
         trigger_alarm()
 
-
-# PSEUDOCODE - Change the following pseudocode into code
-# DEFINE a new function called reset_system
-# INSIDE the function, print "System rebooting..."
-
-#New function added to funfill the requirnment
-
-#Define a new function called reset_system
+#New function added to funfill the requirnment.
+#Define a new function called reset_system.
 def reset_system():
     #Inside te function, print "system rebooting...."
     print("System is rebooting...")

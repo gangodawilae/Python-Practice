@@ -20,7 +20,7 @@ This starts with a menu so users can run 1 of 3 different programs:
 def run_program_one():
 
     # Paste the code fo your first program
-    print("You are running progra 1.")
+    print("You are running program 1.")
 
 
 #Create a funtion to hold your second program. 
@@ -62,7 +62,7 @@ def main():
         run_program_three()
     
     else:
-        print("Invaid choice Please restart the program and enter 1,2, or 3")
+        print("Invaid choice. Please restart the program and enter 1,2, or 3")
 
 
 #===============================

@@ -2,7 +2,10 @@
 security_status = "LOCKED"
 alarm_sound = "SIREN"
 
+
+#This alarm set when the user set the yes
 def trigger_alarm():
+    #Say the alarm sound
     print(f"Alert! Sounding the {alarm_sound}")
 
 def check_system():

@@ -288,47 +288,47 @@
 
 # calculate_with_discount()
 
-# PROGRAM: Geometry Helper
-# This program helps to calculate the area and circumference of a rectangle
+# def calculate_age():
+#     age=current_year - birth_year
+# def main():
+#     current_year=int(input("What's the current year?"))
+#     birth_year=int(input("What's year you were norn?"))
 
-####### INSTRUCTIONS ########
-# Complete the code by writing a function for calculating the circumference,
-# and calling each calculate function based on user choice
-# =====================================================================
-# FUNCTIONS
-# =====================================================================
+#     calculate_age()
+#     print(f"You are {age} years old")
+# main()
 
-# Calculate the area of a rectangle based on length and width from user
-def calculate_area():
-    length = int(input("What is the length? "))
-    width = int(input("What is the width? "))
-    print(f"The area is {length * width}².")
+# def calculate_area(x, y):
+#     print(f"Area : {x * y}")
 
-# Write a function here for calculating the circumference after getting length and width from user
-def calculate_circumference():
-    length = int(input("What is the length? "))
-    width = int(input("What is the width? "))
-    print(f"The circumference is {2 * (length + width)}.")
+# calculate_area()
 
-# Run the main program
-def main():
-    print("Welcome to the Geometry Helper for rectangles!\n")
-    print("1. Area Calculator")
-    print("2. Circumference Calculator")
-    
-    choice = input("\nWhich tool do you want to use? (1 or 2): ").strip()
-    
-    # Trigger function based on user choice
-    if choice == "1":
-        # Call the function for calculating area here
-        calculate_area()
-    elif choice == "2":
-        # Call the function for calculating circumference here
-        calculate_circumference()
-    else:
-        print("Invalid choice. Exiting dashboard.")
+# def repeat_message(message, times):
+#     for i in range(message,times):
+#         print("Hello")
 
-# =====================================================================
-# EXECUTION
-# =====================================================================
-main()
+# repeat_message(5, "Hello")
+
+# def get_number():
+#     while True:
+#         num = input("Give me a number.")
+#         try:
+#             num = int(num)
+#             return
+#         except:
+#             print("That's not a number")
+
+# num = get_number()
+
+# def check_play():
+#     play=input("Do you want to play?")
+
+#     if play.lower() in ["y","yes"]:
+#         return True
+#     else:
+#         return False
+# check_play()
+
+def calculate_area(x,y):
+    print(f"Area: {x * y} ")
+calculate_area(5,6)

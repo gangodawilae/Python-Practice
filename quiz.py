@@ -15,15 +15,20 @@ print(f"\nLet's start!!, I believe in you, {user_name}!")
 print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
 
 #Question 1
-print("\n1. Who is the first person to space?")
+questions =print("\n1. Who is the first person to space?")
 print("a) Yuri Gagarin")
 print("b)Thomas Eddison")
 print("c)Neil Armstrong")
 
 #Get answer in lowercase with proper spacing
-answer=input("Your answer: ").strip().lower()
+while True:
+   answer=input("Your answer: ").strip().lower()
 
 #Condiional code using if and elif and else
+   if answer=="":
+      print("Please put something")
+      continue
+   break
 if answer == "a" or answer == "yuri gagarin" or answer== "yuri":
    print(f"correct!, {user_name} ^_^")
    score= score + 1
@@ -33,9 +38,17 @@ else:
    print(f"Wrong,{user_name}. The answer is A")
 
 
-#question 2
+#question 2 with try and excpt
 print("\n2. What is 5+3?")
-answer= input("Your answer:").strip()
+
+while True:
+   answer= input("Your answer:").strip()
+   try:
+      num=int(answer)
+      break
+   except:
+      print("Please enter a number")
+      continue
 
 #Turning string into a integer before comparing
 if int(answer) ==8:
@@ -52,6 +65,12 @@ print("b)Hummingbird")
 print("c) Butterfly")
 answer=input("Your answer: ").strip().lower()
 
+while True:
+   answer = input("Your answer: ").strip().lower()
+   if answer== "":
+      print("Please type something")
+      continue
+   break
 
 if answer == "b" or answer == "hummingbird" or answer == "humming":
    print(f"Correct!, {user_name}. Great job! ")

@@ -77,7 +77,7 @@ def run_magic_8ball():
 # MAIN LOOP
 # TODO Create an infinite loop
     while True:
-        question=input("Ask a yes/no question about your future (or type 'quit' to leave): ")
+        question=input("\nAsk a yes/no question about your future (or type 'quit' to leave): ")
     
     # Check if the user wants to exit and break from the loop if they do.
         if question.lower() == "quit":

@@ -24,9 +24,9 @@ ITEM_PRICE=20
 #===============================
 
 # Display items with prices
-# TODO Create function called display_items with parameters: items, action
-    # TODO Loop through the items
-        # TODO Print the item name and item_price
+# Create function called display_items with parameters: items, action
+    # Loop through the items
+        #Print the item name and item_price
 def display_items(items,action):
     print("\n--------------------")
     print(f"Items available to {action}: ")
@@ -46,12 +46,12 @@ def display_items(items,action):
         choice = input(f"What would you like to {action}?").strip()
     
 
-        # If input is 'EXIT'
+        # If the user's input is equal to  'EXIT', return 
         if choice == "Exit":
             #return
             return None
 
-        #Check if items exsists
+        #We use "in" statement and see, and check if items exsists.
         for item in items:
             if choice == item:
                 return item
@@ -76,11 +76,13 @@ def main():
 
     # Create an infinite while loop
     while True:
+        #This is show the shop menu, including buy, sell, and exit. 
         print("Shop menu")
         print("1.Buy")
         print("2.Sell")
         print("3.Exit")
 
+        
         choice=input("Choose an option:").strip()
         
         if choice == "3":

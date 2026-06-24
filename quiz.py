@@ -10,7 +10,7 @@ def ask_question(question, options, correct_answers):
 
    #Ask the user for an answer in this loop until they type something correct
    while True:
-      answer = input("Your answer:").strip().lower()
+      answer = input("Your answer:\n").strip().lower()
       if answer == "":
          print("Please type something, so I can check your answer.")
          continue
@@ -28,18 +28,23 @@ def ask_question(question, options, correct_answers):
 def show_results(name, score, total):
 
    print("\n******************************")
-   print("" * 12 + "RESULTS")
+
+   print("RESULTS")
+   
    print(f"\n{name}, you got, {score} correct out of {total}!")
-   print(">----(^_^)----<")
-   print("*********************************")
+
+   print("\n>----(^_^)----<")
 
    #This is the part where, feedbacks gives on their score.
    if score>=8:
       print("Excellent work! You are amazing. (\\^o^/)")
+      print("*********************************")
    elif score>= 5:
       print("Good Job! Keep improving.(^o^)")
+      print("*********************************")
    else:
       print("Don't worry. You can try again!(o_^)")
+      print("*********************************")
 
    
 
@@ -51,7 +56,7 @@ def show_results(name, score, total):
    print(r"(___Y___)_,--._______________________ GOOD JOB")
    print(r"               `--'           `--'")
 
-   print("\nThanks for playing my quiz!!")
+   
    print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
 
 #Main program
@@ -70,7 +75,7 @@ def play_quiz():
 
    #This is the list of questions, and each question is lsted as question, list of options, list of orrect answer.
    questions = [
-      "1. Who is the first person to go to space?",
+      "1. Who is the first person to go to space?", 
       "2. What is 5+3?",
       "3. Which bird can fly beackward?",
       "4. What is the national bird of New Zealand?",
@@ -84,16 +89,16 @@ def play_quiz():
    ]
 
    options = [
-      ["a) Yuri Gagarin", "b) Thomas Edison", "c)Neil Armstrong"],
+      ["a) Yuri Gagarin", "b) Thomas Edison", "c) Neil Armstrong"],
       [],
-      ["a) Blue duck", "b) Hummingbird", "c)Butterfly"],
+      ["a) Blue duck", "b) Hummingbird", "c) Butterfly"],
       ["a)Kiwi", "b)Tui","c)Ruru"],
       ["a)Rome", "b)Russia", "c)Greece"],
       ["a)Water","b)Milk", "c)Tea"],
-      ["a) 117", "b)35", "c)145"],
-      ["a) Object mode is for animating and edit mode is for texturing", "b) Object mode is for modelling and edit mode is for moving objects around", "c)Object mode is for position, rotate and scale the objects while edit mode is for change their geometry."],
-      ["a) Saturn", "b) Jupiter", "c)Sun"],
-      ["a) Skin", "b) Heart", "c)Lungs"],
+      ["a)117", "b)35", "c)145"],
+      ["a) Object mode is for animating and edit mode is for texturing", "b) Object mode is for modelling and edit mode is for moving objects around", "c) Object mode is for position, rotate and scale the objects while edit mode is for change their geometry."],
+      ["a) Saturn", "b) Jupiter", "c) Sun"],
+      ["a) Skin", "b) Heart", "c) Lungs"],
       ["a)Molecule", "b)Atom", "c)Proton"]
    ]
 
@@ -130,10 +135,12 @@ def play_quiz():
       #Give feedback like they got it correct or wrong after each question.
       if is_correct:
          print(f"\nCorrect, {name}!. Great Job!!!^_^")
+         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
          score+=1
 
       else:
          print(f"\nWrong, {name}. The correct answer is {correct_answer}. Try again next time.")
+         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
    
    #Show the final results.
@@ -147,6 +154,8 @@ while True:
 
    again= input("\n Do you want to play again? (yes/no): ").strip().lower()
    if again not in ("yes", "y"):
+      print("\nThanks for playing my quiz!!")
       print("Goodbye.....")
+      print(".oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo. ")
 
       break

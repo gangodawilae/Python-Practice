@@ -36,7 +36,7 @@ while True:
     result = ""
     for i in range(5):
         if guess[i] == secret[i]:
-            result += f"\033[32m{guess[i]}\033[0m"
+            # result += f"\033[32m{guess[i]}\033[0m"
 
         elif guess[i] in secret:
             result += f"\033[33m{guess[i]}\033[0m"

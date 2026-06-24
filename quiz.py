@@ -1,372 +1,152 @@
-# #Total question number inside a cosntant
-# TOTAL_QUESTIONS = 11
+#This function ask one question. It shows the question and options, and cleans the user's input properly.
+#And this makes them retry if they type nothing, and returns whather they were corrent. 
+def ask_question(question, options, correct_answers):
+   print("\n" + question)
 
 
-# def ask_question(question_text, options, correct_answers):
-#    print("\n" + question_text)
+   #Print options if the question has any
+   for option in options:
+      print(option)
+
+   #Ask the user for an answer in this loop until they type something correct
+   while True:
+      answer = input("Your answer:").strip().lower()
+      if answer == "":
+         print("Please type something, so I can check your answer.")
+         continue
+      break
+
+   #Check if the user's answer matches any correct answer.
+   is_correct= answer in correct_answers
+   #Return correctness and the correct answer.
+   return is_correct,correct_answers[0]
 
 
-#    #Print options if they exit
-#    if options:
-#       for option in options:
-#          print(option)
 
-#    #Ask the user for an answer in this loop until they type something
-#    while True:
-#       answer = input("Your answer:").strip().lower()
-#       if answer == "":
-#          print("Please type something, so I can check your answer.")
-#          continue
-#       break
+   #This function prints the final results of the quiz.
+   #Like if shows the user's score, gives feedback based on their score.
+def show_results(name, score, total):
 
-#    #Check if the user's answer matches any correct answer.
-#    #And also use Return and False so the main gragram can update the score.
-#    return answer in correct_answers
+   print("\n******************************")
+   print("" * 12 + "RESULTS")
+   print(f"\n{name}, you got, {score} correct out of {total}!")
+   print(">----(^_^)----<")
+   print("*********************************")
 
-
-# def display_result(user_name, score):
-#    #This function prints the final results of the quiz.
-#    #Like if shows the user's score, gives feedback based on their score.
-
-#    print("\n******************************")
-#    print("" * 12 + "RESULTS")
-#    print(f"\n{user_name}, you got, {score} correct out of {TOTAL_QUESTIONS}!")
-#    print(">----(^_^)----<")
-#    print("*********************************")
-
-#    #This is the part where, feedbacks gives on their score.
-#    if score>=8 and score <=11:
-#       print("Excellent work! You are amazing.")
-#    elif score>= 5 and score<8 :
-#       print("Good Job! Keep improving.")
-#    else:
-#       print("Don't worry. You can try again!")
+   #This is the part where, feedbacks gives on their score.
+   if score>=8:
+      print("Excellent work! You are amazing. (\\^o^/)")
+   elif score>= 5:
+      print("Good Job! Keep improving.(^o^)")
+   else:
+      print("Don't worry. You can try again!(o_^)")
 
    
 
-#    # Ending with my cute ASCII art
+   # Ending with my cute ASCII art
 
-#    print("\nBefore you go,here is something for you, ")                             
-#    print(r"( \---/ )")
-#    print(r" ) . . (  ")
-#    print(r"(___Y___)_,--._______________________ GOOD JOB")
-#    print(r"               `--'           `--'")
+   print("\nBefore you go,here is something for you, ")                             
+   print(r"( \---/ )")
+   print(r" ) . . (  ")
+   print(r"(___Y___)_,--._______________________ GOOD JOB")
+   print(r"               `--'           `--'")
 
-#    print("\nThanks for playing my quiz!!")
-#    print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
+   print("\nThanks for playing my quiz!!")
+   print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
 
-# #Main program
-# def main():
-#    score = 0
+#Main program
+def play_quiz():
+   
+   #Ask for users's name, remove extra space and write it nicely
+   name=input("Hello! What is your name?").strip().title()
 
-#    #Ask for users's name, remove extra space and write it nicely
-#    user_name=input("Hello! What is your name?").strip().title()
-
-#    #Start of the quiz with a welcome message to my quiz
-#    print(f"Welcome to my quiz game! {user_name}")
-#    print("\nINSTRUCTIONS:Choose the correct option,(a, b, or c) or write the answer")
-#    input("Are you ready...? Press yes to start")
-#    print(f"\nLet's start!!, I believe in you, {user_name}!")
-#    print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
-
-
-#    #This is the list of questions, and each question is lsted as question, list of options, list of orrect answer.
-#    #Question 1 with all the answers possible. 
-#    ("\n 1. Who is the first person to space?"
-#    ["a) Yuri Gagarin", "b)Thomas Eddison", "c)Nei Armstrong"]
-#    ["a", "yuri", "yuri gagarin"]),
-
-#    #The second question
-#    ("\n 2.What is 5+3?",
-#    []
-#    ["8"]),
-
-#    #The third question.
-#    ("\n3. Which bird can fly backwards?",
-#    ["a) Blue duck", "b)Hummingbird", "c)Butterfly"]
-#    ["b", "Humming", "hummingbird"]),
+   #Start of the quiz with a welcome message to my quiz
+   print(f"Welcome to my quiz game! {name}")
+   print("\nINSTRUCTIONS:Choose the correct option,(a, b, or c) or write the answer")
+   input("Are you ready...? Press yes to start")
+   print(f"\nLet's start!!, I believe in you, {name}!")
+   print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
 
 
-#    #The fourth question. 
-#    ("\n 4. What is the nation bird of New Zealand?",
-#    ["a) Kiwi", "b)Tui", "c)Ruru"]
-#    ["a", "kiwi"]),
+   #This is the list of questions, and each question is lsted as question, list of options, list of orrect answer.
+   questions = [
+      "1. Who is the first person to go to space?",
+      "2. What is 5+3?",
+      "3. Which bird can fly beackward?",
+      "4. What is the national bird of New Zealand?",
+      "5. Where is Mount Olympus located?",
+      "6. What do adult cows drink?",
+      "7. Whatis 128+22-5?",
+      "8. What is the difference between edit mode and object mode in Blender?",
+      "9. Which is the largest planet?",
+      "10. What is the largest organ in human body?",
+      "11. What is the smallest unit of matter?",
+   ]
 
-#    #The fifth question.
-#    ("\n 5. Where is Mount Olympus located?",
-#    ["a) Rome", "b)Russia", "Greece"]
-#    ["c", "greece"]), 
-
-#    #The sixth question
-#    ("\n  6. What does adult cows drink?",
-#    ["a) Water", "b) Milk" , "c) Tea"]
-#    ["a", "water"]),
-
-#    #The sevanth question
-#    ("\n 7. What is 128+22-5?",
-#    ["c", "145", "one hundred forty five", "one hundred and forty five"])
-
-#    #The eighth question
-#    ("\n 8. What is the diffrence between object mode and edit mode in blender?"
-#    ["a) Object mode is for animating and edit mode is for texturing", "b) Object mode is for modelling and edit mode is for moving objects around", "c)Object mode is for position, rotate and scale the objects while edit mode is for change their geometry."],
-#    ["c", "geomery"]),
-
-
-#    #The ninth question
-#    ("\n 9. Which one is the largest planet?",
-#    ["a) Saturn", "b)Jupiter", "c)Sun"],
-#    ["b", "jupiter"]),
-
-
-#    #The tenth question.
-#    ("\n 10. What is the largest organ in human body?",
-#    ["a) Skin", "b)Heart", "c)Lungs"],
-#    ["a", "skin"]),
+   options = [
+      ["a) Yuri Gagarin", "b) Thomas Edison", "c)Neil Armstrong"],
+      [],
+      ["a) Blue duck", "b) Hummingbird", "c)Butterfly"],
+      ["a)Kiwi", "b)Tui","c)Ruru"],
+      ["a)Rome", "b)Russia", "c)Greece"],
+      ["a)Water","b)Milk", "c)Tea"],
+      ["a) 117", "b)35", "c)145"],
+      ["a) Object mode is for animating and edit mode is for texturing", "b) Object mode is for modelling and edit mode is for moving objects around", "c)Object mode is for position, rotate and scale the objects while edit mode is for change their geometry."],
+      ["a) Saturn", "b) Jupiter", "c)Sun"],
+      ["a) Skin", "b) Heart", "c)Lungs"],
+      ["a)Molecule", "b)Atom", "c)Proton"]
+   ]
 
 
-#    #The eleventh question
-#    ("\n 11. What is the smallest unit of matter?",
-#    ["a) Molecule", "b) Atom", "c)Proton"],
-#    ["b", "atom"]),
+   correct_answers=[
+      ["a", "yuri", "yuri gagarin"],
+      ["8", "Eight", "eight"],
+      ["b", "hummingbird", "humming"],
+      ["a", "kiwi"],
+      ["c", "greece"],
+      ["a", "water"],
+      ["c", "145"],
+      ["c", "geometry"],
+      ["b", "jupiter"],
+      ["a", "skin"],
+      ["b", "atom"]
+   ]
 
-#    #The twelth question
-#    ("\n 12. Which gas do plants release when photosynthesis?,"
-#    ["a) Carbondioxide", "b) Methane", "c)Oxygen"],
-#    ["c", "oxygen"]),
+
+   #Integer score starts with 0
+   score=0
 
 
-#    for q_text, q_options, q_correct in TOTAL_QUESTIONS:
-#       if ask_question(q_text, q_options, q_correct):
-#          print(f"Correct!! {user_name}")
+   #This loop goesthrough every question one by one using its index number.
+   for i in range (len(questions)):
 
-#    #Final result
-#    display_result(user_name,score)
+      #This function do two things. is_correct = true or fase depend on what user put. And seecond is, correct answers = the correct answer text to show if they get it wrong.
+      is_correct, correct_answer = ask_question(
+         questions[i],
+         options[i],
+         correct_answers[i]
+      )
 
-# main()
-SCORE=0
-#Question 1
-questions =print("\n1. Who is the first person to space?")
-print("a) Yuri Gagarin")
-print("b)Thomas Eddison")
-print("c)Neil Armstrong")
+      #Give feedback like they got it correct or wrong after each question.
+      if is_correct:
+         print(f"\nCorrect, {name}!. Great Job!!!^_^")
+         score+=1
 
-#Get answer in lowercase with proper spacing
+      else:
+         print(f"\nWrong, {name}. The correct answer is {correct_answer}. Try again next time.")
+
+   
+   #Show the final results.
+   show_results(name,score, len(questions))
+
+
+#Replay the loop
 while True:
-   answer=input("Your answer: ").strip().lower()
+   play_quiz()
+   
 
-#Condiional code using if and elif and else
-   if answer=="":
-      print("Please put something")
-      continue
-   break
-if answer == "a" or answer == "yuri gagarin" or answer== "yuri":
-   print(f"correct!, {user_name} ^_^")
-   score= score + 1
-elif answer == "b" or answer == "neil armstrong":
-   print(f"Almost, {user_name}, but not quite.")
-else:
-   print(f"Wrong,{user_name}. The answer is A")
+   again= input("\n Do you want to play again? (yes/no): ").strip().lower()
+   if again not in ("yes", "y"):
+      print("Goodbye.....")
 
-
-#question 2 with try and excpt
-print("\n2. What is 5+3?")
-
-while True:
-   answer= input("Your answer:").strip()
-   try:
-      num=int(answer)
       break
-   except:
-      print("Please enter a number")
-      continue
-
-#Turning string into a integer before comparing
-if int(answer) ==8:
-   print(f"Correct, {user_name}. Your are great at maths!")
-   score=score +1
-else:
-   print(f"Wrong,{user_name}. The answer is 8")
-
-
-#Question 3 
-print("\n3. Which bird can fly backward?")
-print("a) Blue duck")
-print("b)Hummingbird")
-print("c) Butterfly")
-answer=input("Your answer: ").strip().lower()
-
-while True:
-   answer = input("Your answer: ").strip().lower()
-   if answer== "":
-      print("Please type something")
-      continue
-   break
-
-if answer == "b" or answer == "hummingbird" or answer == "humming":
-   print(f"Correct!, {user_name}. Great job! ")
-   print("(^o^)")
-   score= score + 1
-elif answer == "a" or answer == "blue duck":
-   print(f"Nice try,{user_name}, but blue ducks can't fly backwards")
-else:
-   print(f"Wrong,{user_name}.The answer is b")
-
-
-#Question 4 
-print("\n4. What is the national bird of New Zealand?")
-print("a)kiwi")
-print("b)Tui")
-print("c)Ruru")
-answer=input("Your answer: ").strip().lower()
-
-if answer == "a" or answer=="kiwi" :
-   print(f"Correct!,{user_name} ")
-   score= score + 1
-elif answer == "b" or answer == "tui":
-   print(f"Good try, {user_name}, but not quite.")
-else:
-   print(f"Wrong,{user_name}. The answer is a")
-
-
-#Question 5 
-print("\n5. Where is Mount Olympus located")
-print("a)Rome")
-print("b)Russia")
-print("c)Greece")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer == "c" or answer=="greece":
-   print(f"Correct!, {user_name} ")
-   score= score + 1
-elif answer == "a" or answer == "rome":
-   print(f"Close, but not correct, {user_name}.")
-else:
-   print(f"Wrong,{user_name}. The answer is c.")
-
-
-#Question 6 
-print("\n6. What does adult cows drink?")
-print("a)Water")
-print("b)Milk")
-print("c)Tea")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer == "a" or answer == "water":
-   print(f"Correct!, {user_name}")
-   score= score + 1
-elif answer == "b" or answer == "milk":
-   print(f"Tricky question, {user_name}. Baby cows drink milk, not adult cows ")
-else:
-   print(f"Wrong, {user_name}. The answer is a" )
-
-
-#Question 7 
-print("\n7. What is 128+22-5")
-print("a)117")
-print("b)35")
-print("c)145")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer in ("c", "145", "one hundred forty five", "one hundred and forty five"):
-   print(f"correct!, {user_name}. Good Job. ")
-   print(" (.^.)")
-   score= score + 1
-elif answer == "a" or answer == "117":
-   print(f"Close, but not the correct answer, {user_name}.")
-else:
-   print(f"Wrong, {user_name} The answer is c.")
-
-#Question 8 
-print("\n8.What is the diffrence between object mode and edit mode in blender?")
-print("a)Object mode is for animating and edit mode is for texturing")
-print("b)Object mode is for modelling and edit mode is for moving objects around ")
-print("c)Object mode is for position, rotate and scale the objects while edit mode is for change their geometry. ")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer == "c" or answer == "geometry" in answer:
-   print(f"Correct!, {user_name}")
-   score= score + 1
-elif answer == "b":
-   print(f"Not quite,{user_name}.")
-else:
-   print(f"Wrong, {user_name}.The correct answer is c")
-
-#Question 9 
-print("\n9.Which one is the largest planet?")
-print("a)Saturn")
-print("b)Jupiter")
-print("c)Sun")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer == "b" or answer == "jupiter":
-   print(f"Correct!, {user_name}.")
-   score= score + 1
-elif answer == "a":
-   print(f"Saturn is one of the biggest planet, but not the biggest, {user_name}")
-else:
-   print(f"Wrong, {user_name}. The correct answer is b")
-
-#Question 10 
-print("\n10. What is the largest organ in the human body?")
-print("a)Skin")
-print("b)Heart")
-print("c)Lungs")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer == "a" or answer == "skin":
-   print('Correct! \\^o^/')
-   score= score + 1
-elif answer == "b":
-   print(f"Heart is important, but not the largest orgen,{user_name}")
-else:
-   print(f"Wrong,{user_name}. The answer is a")
-
-#Question 11 
-print("\n11.What is the smallest unit of matter")
-print("a)Molecule")
-print("b)Atom")
-print("c)Proton")
-
-answer=input("Your answer: ").strip().lower()
-
-if answer == "b" or answer== "atom":
-   print(f"Correct!,{user_name}  (o_^)")
-   score= score + 1
-elif answer == "a":
-   print(f"Close, but molecules are made of atoms, {user_name}.")
-else:
-   print(f"Wrong,{user_name}. The answer is b.")
-
-# Final Scoring and feedback
-print("\n******************************")
-print("" * 12 + "RESULTS")
-print(f"\n{user_name}, you got, {score} correct out of {TOTAL_QUESTIONS}!")
-print(">----(^_^)----<")
-print("*********************************")
-
-
-#Give feedback based on the score
-if score>=8 and score <=11:
-   print("Excellent work! You are amazing.")
-elif score>= 5 and score<8 :
-   print("Good Job! Keep improving.")
-else:
-   print("Don't worry. You can try again!")
-
-# Ending with my cute ASCII art
-
-print("\nBefore you go,here is something for you, ")                             
-print(r"( \---/ )")
-print(r" ) . . (  ")
-print(r"(___Y___)_,--._______________________ GOOD JOB")
-print(r"               `--'           `--'")
-
-print("\nThanks for playing my quiz!!")
-print("(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)(^.^)")
-

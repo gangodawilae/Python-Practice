@@ -1,19 +1,52 @@
+#Shuffling questions
+import random
+
+
+#These color codes print the text in diffrent colors. Like green for correct.Red for wrong. Orange for hints. 
+GREEN="92"
+RED="91"
+ORANGE="93"
+
+#This adds color to any text we wants.
+def color(text,code):
+   return f"\033[{code}m{text}\033[0m"
+
+
 #This function ask one question. It shows the question and options, and cleans the user's input properly.
 #And this makes them retry if they type nothing, and returns whather they were corrent. 
-def ask_question(question, options, correct_answers):
-   print("\n" + question)
+def ask_question(question, options, correct_answers,hint_in_text):
+
+   #Put a border
+   print("\n+" + "-" * 60 +"+\n")
+
+   #Print the questions
+   print( question)
 
 
    #Print options if the question has any
    for option in options:
       print(option)
 
+   #The keep the track wheather the user used their hint
+   hint_used=False
+
    #Ask the user for an answer in this loop until they type something correct
    while True:
-      answer = input("Your answer:\n").strip().lower()
+      answer = input("Your answer (or type hint for a hint):\n").strip().lower()
       if answer == "":
-         print("Please type something, so I can check your answer.")
+         print(color("Please type something, so I can check your answer.",ORANGE))
          continue
+      
+      #If the user ask for a hint
+      if answer == "hint":
+         if not hint_used:
+            print(color("Hint:"+ hint_in_text, ORANGE))
+            hint_used=True
+         
+         else:
+            print(color("You already used your hint for this question",RED))
+         continue
+         #If the user type a real, and proper answer, break the loop
       break
 
    #Check if the user's answer matches any correct answer.
@@ -37,13 +70,13 @@ def show_results(name, score, total):
 
    #This is the part where, feedbacks gives on their score.
    if score>=8:
-      print("Excellent work! You are amazing. (\\^o^/)")
+      print("Excellent work! You are amazing. (\\^o^/)",GREEN)
       print("*********************************")
    elif score>= 5:
-      print("Good Job! Keep improving.(^o^)")
+      print("Good Job! Keep improving.(^o^)",ORANGE)
       print("*********************************")
    else:
-      print("Don't worry. You can try again!(o_^)")
+      print("Don't worry. You can try again!(o_^)",RED)
       print("*********************************")
 
    
@@ -66,7 +99,7 @@ def play_quiz():
    name=input("Hello! What is your name?").strip().title()
 
    #Start of the quiz with a welcome message to my quiz
-   print(f"Welcome to my quiz game! {name}")
+   print(color(f"Welcome to my quiz game! {name}",ORANGE))
    print("\nINSTRUCTIONS:Choose the correct option,(a, b, or c) or write the answer")
    input("Are you ready...? Press yes to start")
    print(f"\nLet's start!!, I believe in you, {name}!")
@@ -117,29 +150,50 @@ def play_quiz():
       ["b", "atom"]
    ]
 
+   hints=[
+      "He is a Russian cosmonaut. First name is Yuri!",
+      "It is a number more than 7 and less than 9.",
+      "It is a very tiny bird",
+      "It can't fly",
+      "It is in Greece",
+      "They drink water, not milk",
+      "Do the addition first",
+      "Edit mode changes the shape of the object",
+      "It massive than 1,300 Eartsh could fit inside it.",
+      "It covers your whole body",
+      "It is smaller than a molecule"
+   ]
+
+   #Create a list of index
+   #This lets us shuffle the order of the question
+   indexes = list(range(len(questions)))
+
+   #Shuffle the indexes so the questions show in diffrent order.
+   random.shuffle(indexes) 
 
    #Integer score starts with 0
    score=0
 
 
    #This loop goesthrough every question one by one using its index number.
-   for i in range (len(questions)):
+   for i in indexes:
 
       #This function do two things. is_correct = true or fase depend on what user put. And seecond is, correct answers = the correct answer text to show if they get it wrong.
       is_correct, correct_answer = ask_question(
          questions[i],
          options[i],
-         correct_answers[i]
+         correct_answers[i],
+         hints[i]
       )
 
       #Give feedback like they got it correct or wrong after each question.
       if is_correct:
-         print(f"\nCorrect, {name}!. Great Job!!!^_^")
+         print(color(f"\nCorrect, {name}!. Great Job!!!^_^",GREEN))
          print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
          score+=1
 
       else:
-         print(f"\nWrong, {name}. The correct answer is {correct_answer}. Try again next time.")
+         print(color(f"\nWrong, {name}. The correct answer is {correct_answer}. Try again next time.",RED))
          print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 
    

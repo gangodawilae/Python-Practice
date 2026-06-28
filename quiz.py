@@ -108,17 +108,17 @@ def play_quiz():
 
    #This is the list of questions, and each question is lsted as question, list of options, list of orrect answer.
    questions = [
-      "1. Who is the first person to go to space?", 
-      "2. What is 5+3?",
-      "3. Which bird can fly beackward?",
-      "4. What is the national bird of New Zealand?",
-      "5. Where is Mount Olympus located?",
-      "6. What do adult cows drink?",
-      "7. Whatis 128+22-5?",
-      "8. What is the difference between edit mode and object mode in Blender?",
-      "9. Which is the largest planet?",
-      "10. What is the largest organ in human body?",
-      "11. What is the smallest unit of matter?",
+      " Who is the first person to go to space?", 
+      " What is 5+3?",
+      " Which bird can fly beackward?",
+      " What is the national bird of New Zealand?",
+      " Where is Mount Olympus located?",
+      " What do adult cows drink?",
+      " Whatis 128+22-5?",
+      " What is the difference between edit mode and object mode in Blender?",
+      " Which is the largest planet?",
+      " What is the largest organ in human body?",
+      " What is the smallest unit of matter?",
    ]
 
    options = [
